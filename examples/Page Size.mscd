@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosaicode>
+ <version value="0.0.1"/>
+ <zoom value="1.0"/>
+ <language value="javascript"/>
+ <blocks>
+  <block collapsed="False" id="1" type="mosaicode_lib_javascript_canvas.extensions.blocks.GUI.page">
+   <position x="100.0" y="200.0"/>
+  </block>
+  <block collapsed="False" id="4" type="mosaicode_lib_javascript_canvas.extensions.blocks.GUI.canvas">
+   <position x="300.0" y="200.0"/>
+   <property key="width" value="800"/>
+   <property key="height" value="600"/>
+   <property key="color" value="#F00"/>
+  </block>
+ </blocks>
+ <connections>
+  <connection from_block="1" from_out="0" to_block="4" to_in="1"/>
+  <connection from_block="1" from_out="1" to_block="4" to_in="2"/>
+ </connections>
+ <comments/>
+</mosaicode>

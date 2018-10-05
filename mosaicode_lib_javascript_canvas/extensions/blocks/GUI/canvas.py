@@ -22,8 +22,16 @@ class Canvas(BlockModel):
 
         self.ports = [{"type": "mosaicode_lib_javascript_canvas.extensions.ports.canvas",
                        "name": "output",
-                       "conn_type": "Output",
-                       "label": "output"}
+                       "conn_type": MOSAICODE_PORT_OUTPUT,
+                       "label": "output"},
+                       {"type": "mosaicode_lib_javascript_webaudio.extensions.ports.float",
+                       "name": "width",
+                       "conn_type": MOSAICODE_PORT_INPUT,
+                       "label": "width"},
+                       {"type": "mosaicode_lib_javascript_webaudio.extensions.ports.float",
+                       "name": "height",
+                       "conn_type": MOSAICODE_PORT_INPUT,
+                       "label": "height"}
                       ]
 
         self.properties = [{"name": "width",
@@ -35,6 +43,12 @@ class Canvas(BlockModel):
                             "label": "Height",
                             "value": "600",
                             "type": MOSAICODE_FLOAT
+                            },
+                            {"name": "color",
+                            "label": "Color",
+                            "value": "#F00",
+                            "format": "FF00FF",
+                            "type": MOSAICODE_COLOR
                             }
                            ]
 
@@ -47,9 +61,21 @@ class Canvas(BlockModel):
 
         self.codes["declaration"] = """
    var $port[output]$ = [];
+
+var $port[width]$ = function(value){
+    canvas_$id$.setAttribute("width",value);
+    return true;
+    };
+
+var $port[height]$ = function(value){
+    canvas_$id$.setAttribute("height",value);
+    return true;
+    };
+
 """
 
         self.codes["html"] = """
 <svg width="$prop[width]$" height="$prop[height]$" id="canvas_$id$">
+<rect width="100%" height="100%" fill="$prop[color]$"/>
 </svg>
 """
