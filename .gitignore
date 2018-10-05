@@ -1,0 +1,10 @@
+build/
+dist/
+mosaicode_lib_javascript_canvas.egg-info
+mosaicode_javascript_canvas.egg-info/
+
+\.idea/
+
+python/easy_install
+python/
+debian/

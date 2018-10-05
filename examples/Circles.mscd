@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosaicode>
+ <version value="0.0.1"/>
+ <zoom value="1.0"/>
+ <language value="javascript"/>
+ <blocks>
+  <block collapsed="False" id="2" type="mosaicode_lib_javascript_canvas.extensions.blocks.GUI.circle">
+   <position x="450.0" y="250.0"/>
+   <property key="x" value="10.0"/>
+   <property key="y" value="10.0"/>
+   <property key="radius" value="10.0"/>
+   <property key="color" value="#ff00e1"/>
+  </block>
+  <block collapsed="False" id="3" type="mosaicode_lib_javascript_canvas.extensions.blocks.GUI.circle">
+   <position x="700.0" y="150.0"/>
+   <property key="x" value="99.0"/>
+   <property key="y" value="100.0"/>
+   <property key="radius" value="10.0"/>
+   <property key="color" value="#F00"/>
+  </block>
+  <block collapsed="False" id="4" type="mosaicode_lib_javascript_webaudio.extensions.blocks.form.range">
+   <position x="100.0" y="300.0"/>
+   <property key="value" value="0.0"/>
+   <property key="label" value="y"/>
+   <property key="min" value="0.0"/>
+   <property key="max" value="255.0"/>
+  </block>
+  <block collapsed="False" id="5" type="mosaicode_lib_javascript_webaudio.extensions.blocks.form.range">
+   <position x="200.0" y="400.0"/>
+   <property key="value" value="0.0"/>
+   <property key="label" value="y"/>
+   <property key="min" value="0.0"/>
+   <property key="max" value="255.0"/>
+  </block>
+  <block collapsed="False" id="6" type="mosaicode_lib_javascript_webaudio.extensions.blocks.form.range">
+   <position x="200.0" y="500.0"/>
+   <property key="value" value="0.0"/>
+   <property key="label" value="x"/>
+   <property key="min" value="0.0"/>
+   <property key="max" value="255.0"/>
+  </block>
+  <block collapsed="False" id="7" type="mosaicode_lib_javascript_canvas.extensions.blocks.GUI.canvas">
+   <position x="150.0" y="150.0"/>
+   <property key="width" value="800"/>
+   <property key="height" value="600"/>
+  </block>
+  <block collapsed="False" id="8" type="mosaicode_lib_javascript_webaudio.extensions.blocks.GUI.print">
+   <position x="650.0" y="450.0"/>
+   <property key="label" value="Label"/>
+  </block>
+  <block collapsed="False" id="9" type="mosaicode_lib_javascript_webaudio.extensions.blocks.GUI.print">
+   <position x="650.0" y="550.0"/>
+   <property key="label" value="Label"/>
+  </block>
+  <block collapsed="False" id="10" type="mosaicode_lib_javascript_webaudio.extensions.blocks.arithmetics.addfloat">
+   <position x="400.0" y="100.0"/>
+  </block>
+  <block collapsed="False" id="11" type="mosaicode_lib_javascript_webaudio.extensions.blocks.Types.float">
+   <position x="200.0" y="50.0"/>
+   <property key="float_value" value="10.0"/>
+  </block>
+  <block collapsed="False" id="12" type="mosaicode_lib_javascript_webaudio.extensions.blocks.arithmetics.multiplyfloat">
+   <position x="700.0" y="300.0"/>
+  </block>
+  <block collapsed="False" id="13" type="mosaicode_lib_javascript_webaudio.extensions.blocks.Types.float">
+   <position x="500.0" y="350.0"/>
+   <property key="float_value" value="10.0"/>
+  </block>
+  <block collapsed="False" id="14" type="mosaicode_lib_javascript_webaudio.extensions.blocks.speaker">
+   <position x="1050.0" y="250.0"/>
+  </block>
+  <block collapsed="False" id="15" type="mosaicode_lib_javascript_webaudio.extensions.blocks.oscillator">
+   <position x="850.0" y="350.0"/>
+   <property key="freq" value="440"/>
+   <property key="type" value="sine"/>
+  </block>
+  <block collapsed="False" id="16" type="mosaicode_lib_javascript_webaudio.extensions.blocks.conversion.rgb">
+   <position x="400.0" y="550.0"/>
+  </block>
+  <block collapsed="False" id="17" type="mosaicode_lib_javascript_webaudio.extensions.blocks.metronome">
+   <position x="50.0" y="450.0"/>
+   <property key="value" value="1"/>
+   <property key="time" value="1000"/>
+  </block>
+  <block collapsed="False" id="18" type="mosaicode_lib_javascript_webaudio.extensions.blocks.Types.float">
+   <position x="0.0" y="200.0"/>
+   <property key="float_value" value="1.0"/>
+  </block>
+  <block collapsed="False" id="19" type="mosaicode_lib_javascript_webaudio.extensions.blocks.random">
+   <position x="150.0" y="600.0"/>
+   <property key="min" value="0.0"/>
+   <property key="max" value="255.0"/>
+  </block>
+ </blocks>
+ <connections>
+  <connection from_block="4" from_out="0" to_block="2" to_in="1"/>
+  <connection from_block="5" from_out="0" to_block="2" to_in="2"/>
+  <connection from_block="6" from_out="0" to_block="2" to_in="3"/>
+  <connection from_block="7" from_out="0" to_block="2" to_in="0"/>
+  <connection from_block="4" from_out="0" to_block="8" to_in="0"/>
+  <connection from_block="4" from_out="0" to_block="9" to_in="0"/>
+  <connection from_block="11" from_out="0" to_block="10" to_in="0"/>
+  <connection from_block="4" from_out="0" to_block="10" to_in="1"/>
+  <connection from_block="10" from_out="2" to_block="3" to_in="1"/>
+  <connection from_block="4" from_out="0" to_block="12" to_in="0"/>
+  <connection from_block="13" from_out="0" to_block="12" to_in="1"/>
+  <connection from_block="12" from_out="2" to_block="15" to_in="1"/>
+  <connection from_block="15" from_out="3" to_block="14" to_in="0"/>
+  <connection from_block="2" from_out="5" to_block="3" to_in="0"/>
+  <connection from_block="16" from_out="3" to_block="2" to_in="4"/>
+  <connection from_block="4" from_out="0" to_block="16" to_in="0"/>
+  <connection from_block="5" from_out="0" to_block="16" to_in="1"/>
+  <connection from_block="6" from_out="0" to_block="16" to_in="2"/>
+  <connection from_block="18" from_out="0" to_block="17" to_in="1"/>
+  <connection from_block="17" from_out="0" to_block="19" to_in="1"/>
+  <connection from_block="19" from_out="0" to_block="4" to_in="1"/>
+ </connections>
+ <comments/>
+</mosaicode>
